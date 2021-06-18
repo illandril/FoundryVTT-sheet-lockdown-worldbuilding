@@ -21,9 +21,7 @@
         }
     ],
     "dependencies": [],
-    "systems": [
-        "worldbuilding"
-    ],
+    "system": "worldbuilding",
     "conflicts": [],
     "esmodules": [
         "./scripts/index.js"
