@@ -62,6 +62,9 @@ const makeLocked = (sheetElem, locked) => {
 };
 
 const addRemoveClass = (element, cssClass, isAdd) => {
+  if (!element) {
+    return;
+  }
   isAdd ? element.classList.add(cssClass) : element.classList.remove(cssClass);
 };
 
