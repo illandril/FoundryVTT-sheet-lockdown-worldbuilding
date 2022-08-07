@@ -1,14 +1,15 @@
 {
-    "name": "illandril-sheet-lockdown-worldbuilding",
+    "id": "illandril-sheet-lockdown-worldbuilding",
     "title": "Illandril's Character Sheet Lockdown (Simple World-building)",
     "description": "Locks down character sheets (Simple World-building only) to prevent players from making changes to their character sheets. Note: This is not a secure lockdown, and player could get around it if they really wanted.",
     "version": "1.0.1",
     "library": "false",
     "manifestPlusVersion": "1.2.0",
-    "minimumCoreVersion": "0.8.7",
-    "compatibleCoreVersion": "9",
+    "compatibility": {
+      "minimum": 10,
+      "verified": 10
+    },
     "type": "module",
-    "author": "Joe Spandrusyszyn (illandril)",
     "authors": [
         {
             "name": "Joe Spandrusyszyn (illandril)",
@@ -20,9 +21,17 @@
             "reddit": "u/illandril"
         }
     ],
-    "dependencies": [],
-    "system": "worldbuilding",
-    "conflicts": [],
+    "relationships": {
+        "systems": [
+            {
+                "id": "worldbuilding",
+                "type": "system",
+                "compatibility": {
+                    "verified": "0.6.5"
+                }
+            }
+        ]
+    },
     "esmodules": [
         "./scripts/index.js"
     ],
