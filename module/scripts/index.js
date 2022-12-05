@@ -30,7 +30,7 @@ Hooks.on('renderActorSheet', (actorSheet) => {
       editOnLink.classList.add(CSS_TOGGLE_EDIT_ON);
       const toggleOnString = game.i18n.localize('illandril-sheet-lockdown-worldbuilding.toggleEditOn');
       editOnLink.appendChild(document.createTextNode(toggleOnString));
-      editOnLink.addEventListener('click', () => makeLocked(sheetElem, false), false);
+      editOnLink.addEventListener('click', () => makeLocked(actorSheet, sheetElem, false), false);
       editOnLink.addEventListener('dblclick', stopPropagation, false);
       sheetHeader.insertBefore(editOnLink, sheetTitle.nextSibling);
 
@@ -39,15 +39,16 @@ Hooks.on('renderActorSheet', (actorSheet) => {
       editOffLink.classList.add(CSS_TOGGLE_EDIT_OFF);
       const toggleOffString = game.i18n.localize('illandril-sheet-lockdown-worldbuilding.toggleEditOff');
       editOffLink.appendChild(document.createTextNode(toggleOffString));
-      editOffLink.addEventListener('click', () => makeLocked(sheetElem, true), false);
+      editOffLink.addEventListener('click', () => makeLocked(actorSheet, sheetElem, true), false);
       editOffLink.addEventListener('dblclick', stopPropagation, false);
       sheetHeader.insertBefore(editOffLink, sheetTitle.nextSibling);
     }
-    makeLocked(sheetElem, sheetElem.classList.contains(CSS_LOCK));
+    makeLocked(actorSheet, sheetElem, sheetElem.classList.contains(CSS_LOCK));
   }
 });
 
-const makeLocked = (sheetElem, locked) => {
+const makeLocked = (actorSheet, sheetElem, locked) => {
+  actorSheet.options.editable = !locked;
   addRemoveClass(sheetElem, CSS_LOCK, locked);
   addRemoveClass(sheetElem, CSS_EDIT, !locked);
   for (let elem of sheetElem.querySelectorAll('[data-action],.group-controls,.editor-edit')) {
