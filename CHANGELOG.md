@@ -1,5 +1,13 @@
 # Changelog
 
+## [v2.0.1](https://github.com/illandril/FoundryVTT-sheet-lockdown-worldbuilding/tree/v2.0.1) (2022-12-05)
+
+[Full Changelog](https://github.com/illandril/FoundryVTT-sheet-lockdown-worldbuilding/compare/v2.0.0...v2.0.1)
+
+**Fixed&nbsp;Bugs**
+
+- Attributes get deleted after opening Actor sheet [\#1](https://github.com/illandril/FoundryVTT-sheet-lockdown-worldbuilding/issues/1)
+
 ## [v2.0.0](https://github.com/illandril/FoundryVTT-sheet-lockdown-worldbuilding/tree/v2.0.0) (2022-08-07)
 
 [Full Changelog](https://github.com/illandril/FoundryVTT-sheet-lockdown-worldbuilding/compare/v1.0.1...v2.0.0)
