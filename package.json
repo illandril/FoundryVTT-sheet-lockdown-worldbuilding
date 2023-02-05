@@ -1,6 +1,6 @@
 {
   "name": "@illandril/foundryvtt-sheet-lockdown-worldbuilding",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Illandril's Character Sheet Lockdown (Simple World-building): Locks down character sheets (Simple World-building only) to prevent players from making changes to their character sheets. Note: This is not a secure lockdown, and player could get around it if they really wanted.",
   "type": "module",
   "scripts": {
