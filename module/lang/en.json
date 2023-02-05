@@ -1,7 +1,0 @@
-{
-  "illandril-sheet-lockdown-worldbuilding.setting.showToggleEditRole.label": "Show Toggle Edit To",
-  "illandril-sheet-lockdown-worldbuilding.setting.showToggleEditRole.hint": "A Toggle Edit button will be shown to all users with at least the selected role, allowing them to modify all locked settings. Note: Changing this option will not impact already opened character sheets. Players will need to close and re-open their character sheet to see this change.",
-
-  "illandril-sheet-lockdown-worldbuilding.toggleEditOn": "Locked (Click to Unlock)",
-  "illandril-sheet-lockdown-worldbuilding.toggleEditOff": "Unlocked (Click to Lock)"
-}
