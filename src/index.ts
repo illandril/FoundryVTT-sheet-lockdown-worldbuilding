@@ -9,18 +9,20 @@ const CSS_TOGGLE_EDIT_OFF = module.cssPrefix.child('toggleEditOff');
 const CSS_HIDE = module.cssPrefix.child('hide');
 const CSS_NO_POINTER_EVENTS = module.cssPrefix.child('noPointerEvents');
 
-const minimumRoleChoices = Object.keys(foundry.CONST.USER_ROLES).reduce((choices, roleKey) => {
-  if (roleKey !== 'NONE') {
-    choices[roleKey] = `USER.Role${roleKey.titleCase()}`;
-  }
-  return choices;
-}, {} as { [name: string]: string });
+const minimumRoleChoices = Object.keys(foundry.CONST.USER_ROLES).reduce(
+  (choices, roleKey) => {
+    if (roleKey !== 'NONE') {
+      choices[roleKey] = `USER.Role${roleKey.titleCase()}`;
+    }
+    return choices;
+  },
+  {} as { [name: string]: string },
+);
 
 const ShowToggleEditRole = module.settings.register('showToggleEditRole', String, 'GAMEMASTER', {
   hasHint: true,
   choices: minimumRoleChoices,
 });
-
 
 Hooks.on('renderActorSheet', (actorSheet) => {
   module.logger.debug('rendorActorSheet', actorSheet.isEditable);
@@ -100,7 +102,7 @@ const addRemoveClass = (element: Element, cssClass: string, isAdd: boolean) => {
 const faIcon = (name: string) => {
   const icon = document.createElement('i');
   icon.classList.add('fas');
-  icon.classList.add('fa-' + name);
+  icon.classList.add(`fa-${name}`);
   return icon;
 };
 

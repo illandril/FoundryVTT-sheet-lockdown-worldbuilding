@@ -1,14 +1,10 @@
 {
   "compatibility": {
     "minimum": 10,
-    "verified": 11
+    "verified": 12
   },
-  "esmodules": [
-    "module.js"
-  ],
-  "styles": [
-    "styles.css"
-  ],
+  "esmodules": ["module.js"],
+  "styles": ["styles.css"],
   "languages": [
     {
       "lang": "en",
@@ -29,6 +25,10 @@
     ]
   },
   "media": [
+    {
+      "type": "setup",
+      "url": "https://github.com/illandril/FoundryVTT-sheet-lockdown-worldbuilding/raw/main/screenshots/setup.png"
+    },
     {
       "type": "cover",
       "url": "https://github.com/illandril/FoundryVTT-sheet-lockdown-worldbuilding/raw/main/screenshots/examples-preview.png"
